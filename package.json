@@ -1,0 +1,24 @@
+{
+  "name": "merge-with-observable",
+  "version": "0.1.0",
+  "description": "Merges provided object into MobX observable taking into account custom rules when specified.",
+  "main": "dist/mergeWithObservable.js",
+  "author": "Alexey Kornilov <alexey.kornilov@kavolorn.ru>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-preset-env": "^1.4.0",
+    "eslint": "^3.19.0",
+    "eslint-loader": "^1.7.1",
+    "mobx": "^3.1.9",
+    "mocha": "^3.2.0",
+    "webpack": "^2.4.1"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production webpack --progress --hide-modules",
+    "watch": "NODE_ENV=development webpack --progress --hide-modules --watch",
+    "test": "NODE_ENV=production babel ./tests --out-dir ./dist && mocha dist/tests"
+  }
+}
